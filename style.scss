@@ -1,0 +1,244 @@
+$main_background: rgb(197, 193, 193);
+$header_background_color: rgba(128, 128, 128, 0.534);
+$footer_background: tomato;
+$motto_box_shadow: inset 0 0 10px #000000;
+
+body{
+    margin: 0;
+}
+
+
+.main{
+    margin: 0 auto;
+    background-color: $main_background;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-top: 20px;
+    .nav-bar{
+        display: flex;
+        // position: relative;
+        // position: absolute;
+        align-items: center;
+        padding: 0 10px;
+        margin: 0 100px;
+        background-color: $header_background_color;
+        border-radius: 10px;
+        i{
+            position: absolute;
+            height: 20px;
+            border: 5px solid #ffff;
+            top: 39px;
+            left: 234px;
+            margin: 0 10px;
+            transform: rotate(48deg);
+            &::after{
+            content: "";
+            position: absolute;
+            height: 20px;
+            border: 5px solid #ffff;;
+            top: -4px;
+            left: -5px;
+            transform: rotate(90deg);
+            }
+            
+        }
+        .logo{
+            color: #ffff;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            margin-left: auto;
+            li{
+                padding: 10px 20px;
+                a{
+                    color: #ffff;
+                    text-decoration: none;
+                    transition: .3s;
+                    &:hover{
+                        background-color: goldenrod;
+                        padding: 10px 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .motto{
+        font-family: 'Luxurious Roman', cursive;
+            position: absolute;
+            top: 220px;
+            left: 0px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @mixin motto-text{     
+                color: white;
+                font-size: 5rem;
+                padding: 10px;
+                margin-right: 20px;
+                // backdrop-filter: blur(10px);
+                box-shadow: $motto_box_shadow
+            }
+        div{
+            &:first-child{
+               @include motto-text();
+            }
+            &:nth-child(2){
+                @include motto-text();
+            }
+            &:last-child{
+                @include motto-text();
+                margin-right: 0;
+            }
+        }
+       
+    }
+    
+}
+
+
+
+
+.btn{
+    display: inline-block;
+    border: 2px solid;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: .5s;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover{
+        transform: scale(1.1)
+    }
+}
+
+
+@mixin side-title($background_color){
+    position: absolute;
+    text-align: center;
+    top: 45px;
+    right: -69px;
+    color: white;
+    background-color: $background_color;
+    padding: 0px 8px;
+    border-radius: 10px;
+    transform: rotate(270deg);
+}
+
+
+@mixin border($border_width, $border_style, $border_color) {
+    border: $border_width;
+    border-style: $border_style;
+    border-color: $border_color;
+    border-radius: 10px;
+} 
+.services{
+    padding: 0 20px;
+    display: flex;
+    margin: 20px 0;
+    .single-service{
+         @include border(2px, dashed, blue);
+        padding: 0 20px 0px 10px;
+        margin-right: 20px;
+        position: relative;
+        &:last-child{
+            margin-right: 0;
+        }
+        h4{
+            font-size: 20px;
+        }
+        &:first-child h4{
+            @include side-title(rgba(95, 158, 160, 0.418))
+        }
+        &:nth-child(2) h4{
+            @include side-title(rgb(143, 16, 16, 0.418))
+        }
+        &:last-child h4{
+            @include side-title(rgb(0, 128, 128, 0.418))
+        }
+    }
+    .btn-green{
+        @extend .btn;
+        background-color: green;
+        &:hover{
+            background-color: orange;
+        }
+    }
+    
+    .btn-cadetblue{
+        @extend .btn;
+        background-color: cadetblue;
+        
+        &:hover{
+            background-color: goldenrod;
+        }
+    }
+    
+    .btn-red{
+        @extend .btn;
+        background-color: rgb(143, 16, 16);
+        &:hover{
+            background-color: rgb(54, 87, 177);
+        }
+    }
+}
+
+.about{
+    padding: 0 20px;
+    margin: 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+    @include border(2px, solid , red);
+    .about-btn{
+        @extend .btn;
+        background-color: teal;
+        &:hover{
+            background-color: skyblue;
+        }
+    }
+    i{
+            position: absolute;
+            height: 19px;
+            width: 19px;
+            border: 3px solid rgb(160, 39, 39);
+            top: 3px;
+            left: 140px;
+            border-radius: 50%;
+            &::after{
+            content: "";
+            position: absolute;
+            height: 19px;
+            width: 19px;
+            border: 2px solid rgb(160, 39, 39);
+            top: 7px;
+            left: 3px;
+            border-radius: 50%;
+            }
+        
+       
+    }
+
+}
+
+.footer{
+    background-color: $footer_background;
+    color: #ffff;
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+}

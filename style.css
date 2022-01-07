@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+}
+
+.main {
+  margin: 0 auto;
+  background-color: #c5c1c1;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.hero .nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 100px;
+  background-color: rgba(128, 128, 128, 0.534);
+  border-radius: 10px;
+}
+
+.hero .nav-bar i {
+  position: absolute;
+  height: 20px;
+  border: 5px solid #ffff;
+  top: 39px;
+  left: 234px;
+  margin: 0 10px;
+  transform: rotate(48deg);
+}
+
+.hero .nav-bar i::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  border: 5px solid #ffff;
+  top: -4px;
+  left: -5px;
+  transform: rotate(90deg);
+}
+
+.hero .nav-bar .logo {
+  color: #ffff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero .nav-bar ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.hero .nav-bar ul li {
+  padding: 10px 20px;
+}
+
+.hero .nav-bar ul li a {
+  color: #ffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .nav-bar ul li a:hover {
+  background-color: goldenrod;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.hero .motto {
+  font-family: "Luxurious Roman", cursive;
+  position: absolute;
+  top: 220px;
+  left: 0px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .motto div:first-child {
+  color: white;
+  font-size: 5rem;
+  padding: 10px;
+  margin-right: 20px;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.hero .motto div:nth-child(2) {
+  color: white;
+  font-size: 5rem;
+  padding: 10px;
+  margin-right: 20px;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.hero .motto div:last-child {
+  color: white;
+  font-size: 5rem;
+  padding: 10px;
+  margin-right: 20px;
+  box-shadow: inset 0 0 10px #000000;
+  margin-right: 0;
+}
+
+.btn,
+.about .about-btn,
+.services .btn-red,
+.services .btn-cadetblue,
+.services .btn-green {
+  display: inline-block;
+  border: 2px solid;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover,
+.about .about-btn:hover,
+.services .btn-red:hover,
+.services .btn-cadetblue:hover,
+.services .btn-green:hover {
+  transform: scale(1.1);
+}
+
+.services {
+  padding: 0 20px;
+  display: flex;
+  margin: 20px 0;
+}
+
+.services .single-service {
+  border: 2px;
+  border-style: dashed;
+  border-color: blue;
+  border-radius: 10px;
+  padding: 0 20px 0px 10px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.services .single-service:last-child {
+  margin-right: 0;
+}
+
+.services .single-service h4 {
+  font-size: 20px;
+}
+
+.services .single-service:first-child h4 {
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  right: -69px;
+  color: white;
+  background-color: rgba(95, 158, 160, 0.418);
+  padding: 0px 8px;
+  border-radius: 10px;
+  transform: rotate(270deg);
+}
+
+.services .single-service:nth-child(2) h4 {
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  right: -69px;
+  color: white;
+  background-color: rgba(143, 16, 16, 0.418);
+  padding: 0px 8px;
+  border-radius: 10px;
+  transform: rotate(270deg);
+}
+
+.services .single-service:last-child h4 {
+  position: absolute;
+  text-align: center;
+  top: 45px;
+  right: -69px;
+  color: white;
+  background-color: rgba(0, 128, 128, 0.418);
+  padding: 0px 8px;
+  border-radius: 10px;
+  transform: rotate(270deg);
+}
+
+.services .btn-green {
+  background-color: green;
+}
+
+.services .btn-green:hover {
+  background-color: orange;
+}
+
+.services .btn-cadetblue {
+  background-color: cadetblue;
+}
+
+.services .btn-cadetblue:hover {
+  background-color: goldenrod;
+}
+
+.services .btn-red {
+  background-color: #8f1010;
+}
+
+.services .btn-red:hover {
+  background-color: #3657b1;
+}
+
+.about {
+  padding: 0 20px;
+  margin: 0 20px;
+  margin-bottom: 20px;
+  position: relative;
+  border: 2px;
+  border-style: solid;
+  border-color: red;
+  border-radius: 10px;
+}
+
+.about .about-btn {
+  background-color: teal;
+}
+
+.about .about-btn:hover {
+  background-color: skyblue;
+}
+
+.about i {
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  border: 3px solid #a02727;
+  top: 3px;
+  left: 140px;
+  border-radius: 50%;
+}
+
+.about i::after {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  border: 2px solid #a02727;
+  top: 7px;
+  left: 3px;
+  border-radius: 50%;
+}
+
+.footer {
+  background-color: tomato;
+  color: #ffff;
+  padding: 20px;
+  text-align: center;
+  font-size: larger;
+}
+
+/*# sourceMappingURL=style.css.map */
